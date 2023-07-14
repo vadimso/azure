@@ -1,3 +1,4 @@
+# This script  installs az cli and az aks cli 
 #!/bin/bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 sudo apt-get update
@@ -11,8 +12,8 @@ sudo apt-get update
 sudo apt-get install azure-cli
 az login
 az aks install-cli
-az account set --subscription Azure subscription 1
-az account set --subscription 0d3b54f0-945a-45a2-a1ee-b694c5e8c618
+#az account set --subscription XXXXXXXXXXXX
 az aks install-cli
-cd /usr/bin/
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+#cd /usr/bin/
+#curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+az aks get-credentials --resource-group RGNAME --name CLUSTERNAME
